@@ -1,0 +1,18 @@
+# External Tool: Project Statistics
+# Analyzes project statistics using a bundled script
+
+name: project_stats
+description: "Analyze project statistics in workspace"
+enabled: false
+
+params:
+  format:
+    type: string
+    description: "Output format"
+    required: false
+    default: "table"
+    enum: ["table", "json", "csv"]
+
+command: '"{_tools_dir}/bin/stats" -d {_workspace} [-f {format}]'
+timeout: 30
+workdir: "{_workspace}"

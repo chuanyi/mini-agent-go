@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(go build:*)",
+      "Bash(cmd /c \"go build -o mini-agent-go.exe ./cmd\")",
+      "Bash(where:*)"
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+# Directories to ignore
+output/
+refer/
+workspace/
+
+# Build artifacts
+mini-agent-go
+mini-agent-go.exe
+
+# .agent/ - keep structure but ignore sensitive config and runtime data
+.agent/config.yaml
+.agent/skills/
+.agent/logs/
+.agent/memory.json
+.agent/tasks/
+.agent/tools/bin/.env
+.agent/tools/config/
+
+# Go build cache
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary
+*.test
+
+# Output of the go coverage tool
+*.out
+
+# Dependency directories
+vendor/
+
+# Go workspace file
+go.work
+
+# IDE specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS specific files
+.DS_Store
+Thumbs.db

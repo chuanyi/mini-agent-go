@@ -1,0 +1,19 @@
+# External Tool: Image Understanding
+# Analyze and understand image content from file by a powerful LLM, follow your instruction, Only support jpeg, png, webp formats.
+
+name: understand_image
+description: "Analyze and understand image content from file by a powerful LLM, follow your instruction, Only support jpeg, png, webp formats."
+enabled: true
+
+params:
+  prompt:
+    type: string
+    description: "The text prompt describing what you want to analyze or extract from the image"
+    required: true
+  image:
+    type: string
+    description: "The source location of the image to analyze"
+    required: true
+
+command: mcporter --config "{_tools_dir}/config/mcporter.json"  call MiniMax.understand_image prompt:'{prompt}' image_source:'{image}'
+timeout: 180

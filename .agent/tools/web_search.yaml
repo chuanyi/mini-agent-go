@@ -1,0 +1,15 @@
+# External Tool: Web search
+# Performs a web search to retrieve information from the web
+
+name: web_search
+description: "Performs a web search to retrieve information from the web"
+enabled: true
+
+params:
+  query:
+    type: string
+    description: "The search query string"
+    required: true
+
+command: mcporter --config "{_tools_dir}/config/mcporter.json" call MiniMax.web_search query:'{query:raw}'
+timeout: 60

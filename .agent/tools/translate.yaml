@@ -1,0 +1,21 @@
+# External Tool: Text Translation (shell mode with pipe)
+# Translates text to target language using a translator CLI
+
+name: translate
+description: "Translate text to target language"
+enabled: false
+
+params:
+  text:
+    type: string
+    description: "Text to translate"
+    required: true
+  lang:
+    type: string
+    description: "Target language code (en, zh, ja, etc.)"
+    required: true
+    enum: ["en", "zh", "ja", "ko", "fr", "de"]
+
+mode: shell
+command: echo {text} | translator --to {lang}
+timeout: 30

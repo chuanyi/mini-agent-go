@@ -1,0 +1,40 @@
+# External Tool: Image Generation
+# Generates images from text prompts
+
+name: generate_image
+description: "Generate new images from a prompt or edit existing images based on instructions. Supports model selection, aspect ratio control, optional input paths(when edit)"
+enabled: true
+
+params:
+  command:
+    type: string
+    enum: ["create", "edit"]
+    description: "Operation type: create a new image or edit an existing one"
+    required: true
+  prompt:
+    type: string
+    description: "Text instruction describing the image to generate or how to edit it"
+    required: true
+  model:
+    type: string
+    description: "Model choice: fast for speed, pro for higher quality"
+    required: false
+    default: "fast"
+    enum: ["fast", "pro"]
+  ratio:
+    type: string
+    description: "Image aspect ratio"
+    required: false
+    default: "1:1"
+    enum: ["1:1", "16:9", "9:16", "4:3", "3:4"]
+  input:
+    type: string
+    description: "Path or reference to the source image (required for edit)"
+    required: false    
+  output:
+    type: string
+    description: "Desired output image path"
+    required: true
+
+command: "{_tools_dir}/bin/gen_image.exe {command} -p '{prompt}' [-m {model}] [-r '{ratio}'] [-i '{input}'] -o '{output}'"
+timeout: 300
