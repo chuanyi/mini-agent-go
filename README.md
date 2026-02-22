@@ -282,9 +282,9 @@ go test ./internal/agent -v
 
 ## 教程
 
-详见 [`docs/`](docs/README.md)——《用 Claude Code 打造你的数字员工》系列教程，从零讲解Mini-Agent-Go框架的每个模块。
+详见 [`docs/`](docs/README.md)——《用 Claude Code 打造你的智能体数字员工》系列教程，从零讲解如何一步步构建Mini-Agent-Go框架的每个模块。
 
- <img src="docs/3.png">  
+<img src="docs/3.png">  
 
 ## License
 
