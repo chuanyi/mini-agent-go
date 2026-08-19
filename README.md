@@ -1,3 +1,5 @@
+
+
 # Mini Agent Go
 
 一个用 Go 语言实现的完整Mini AI Agent 框架，支持工具调用、自主任务执行、持久记忆、异步任务、IM 集成等能力。代码和教程全程由 Claude Code 协作实现。
@@ -144,6 +146,7 @@ channels:
 | `/clear` | 清空对话历史 |
 | `/stats` | 显示会话统计 |
 | `/help` | 显示帮助 |
+| `/quit` | 退出 |
 
 ## 技能系统
 
